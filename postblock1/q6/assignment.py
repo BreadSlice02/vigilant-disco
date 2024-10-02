@@ -67,7 +67,7 @@ def run(argv=None, save_main_session=True):
         | "Window into Fixed Intervals" >> beam.WindowInto(
             window.FixedWindows(60),
             trigger=Repeatedly(AfterProcessingTime(60)),
-            allowed_lateness=0,
+            allowed_lateness=30,
             accumulation_mode=AccumulationMode.ACCUMULATING
         )
         | "Map to Key-Value" >> beam.Map(lambda x: ((x['user_id'], x['url']), x['bytes']))
