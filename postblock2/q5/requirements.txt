@@ -1,0 +1,9 @@
+google-cloud-storage
+pandas
+transformers
+torch
+scikit-learn
+emoji
+sentencepiece
+seaborn
+matplotlib
