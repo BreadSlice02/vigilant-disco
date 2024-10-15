@@ -13,8 +13,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the working directory contents into the container
 COPY . .
 
-# Set environment variable for Google Application Credentials
-ENV GOOGLE_APPLICATION_CREDENTIALS="nuweprojekkey.json"
-
 # Run bdt-sentiment.py when the container launches
 CMD ["python", "bdt-sentiment.py"]
